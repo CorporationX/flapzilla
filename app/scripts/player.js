@@ -10,7 +10,7 @@ window.Player = (function () {
     var DOWN = 130;
     var CHANGE = 0;
     var WIDTH = 5;
-    var HEIGHT = 5;
+    var HEIGHT = 3;
     var INITIAL_POSITION_X = 30;
     var INITIAL_POSITION_Y = 25;
 
@@ -64,7 +64,7 @@ window.Player = (function () {
         if (this.pos.x < 0 ||
             this.pos.x + WIDTH > this.game.WORLD_WIDTH ||
             this.pos.y < 0 ||
-            this.pos.y + HEIGHT > this.game.WORLD_HEIGHT) {
+            this.pos.y + HEIGHT > this.game.WORLD_HEIGHT - 3) {
             return this.game.gameover();
         }
     };
