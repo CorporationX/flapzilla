@@ -17,11 +17,11 @@
 
 	background: yellow;
 	transform-origin: top left;
-	-webkit-animation: flap 0.4s alternate infinite;
-	-moz-animation: flap 0.4s alternate infinite;
-	-ms-animation: flap 0.4s alternate infinite;
-	-o-animation: flap 0.4s alternate infinite;
-	animation: flap 0.4s alternate infinite;
+	-webkit-animation: flap 0.2s alternate infinite;
+	-moz-animation: flap 0.2s alternate infinite;
+	-ms-animation: flap 0.2s alternate infinite;
+	-o-animation: flap 0.2s alternate infinite;
+	animation: flap 0.2s alternate infinite;
 }
 
 .Scoreboard {
@@ -93,10 +93,24 @@ height: 57.6em;
 margin-left: -51.2em;
 margin-top: -28.8em;
 overflow: hidden;
-background: #00CCFF;
+background: #5CC5F2;
+}
+
+.Background{
+	width: 155.4em;
+	height: 37.7em;
+
+	background: url(../../app/images/background_clouds.jpg) repeat-x;
+	//background-size: contain;
+// 	-webkit-animation: animateClouds 2s linear infinite;
+// 	-moz-animation: animateClouds 2s linear infinite;
+// 	-ms-animation: animateClouds 2s linear infinite;
+// 	-o-animation: animateClouds 2s  linear infinite;
+// 	animation: animateClouds 2s linear infinite;
 }
 
 
+// >>>> FLAP <<<<<
 @-webkit-keyframes flap {
 	from {
 		-webkit-transform:  rotateX(0);
@@ -146,6 +160,7 @@ background: #00CCFF;
 	}
 }
 
+// >>>> ANIMATEGROUND<<<<<
 
 @-webkit-keyframes animateGround {
 	from {
@@ -195,3 +210,54 @@ background: #00CCFF;
 		transform: translate3d(-3em, 0, 0);
 	}
 }
+
+// >>>> ANIMATEBACKGROUND<<<<<
+
+// @-webkit-keyframes animateClouds {
+// 	from {
+// 		-webkit-transform: translate3d(0, 0, 0);
+
+// 	}
+// 	to {
+// 		-webkit-transform: translate3d(-53em, 0, 0);
+// 	}
+// }
+// @-moz-keyframes animateClouds {
+// 	from {
+// 		-moz-transform: translate3d(0, 0, 0);
+
+// 	}
+// 	to {
+// 		-moz-transform: translate3d(-53em, 0, 0);
+// 	}
+// }
+
+// @-ms-keyframes animateClouds {
+// 	from {
+// 		-ms-transform: translate3d(0, 0, 0);
+
+// 	}
+// 	to {
+// 		-ms-transform: translate3d(-53em, 0, 0);
+// 	}
+// }
+
+// @-o-keyframes animateClouds {
+// 	from {
+// 		-o-transform: translate3d(0, 0, 0);
+
+// 	}
+// 	to {
+// 		-o-transform: translate3d(-53em, 0, 0);
+// 	}
+// }
+
+// @keyframes animateClouds {
+// 	from {
+// 		transform: translate3d(0, 0, 0);
+
+// 	}
+// 	to {
+// 		transform: translate3d(-53em, 0, 0);
+// 	}
+// }
