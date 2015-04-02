@@ -79,12 +79,6 @@ color: white;
 body {
 background: black;
 }
-.browsehappy {
-margin: 0.2em 0;
-background: ?#?ccc?;
-color: #000;
-padding: 0.2em 0;
-}
 .GameCanvas {
 font-size: 10px;
 position: absolute;
@@ -99,16 +93,16 @@ background: #5CC5F2;
 }
 
 .Background{
-	width: 155.4em;
-	height: 37.7em;
+	width: 153.6em;
+	height: 37.3em;
 
-	background: url(../../app/images/background_clouds.jpg) repeat-x;
-	//background-size: contain;
-// 	-webkit-animation: animateClouds 2s linear infinite;
-// 	-moz-animation: animateClouds 2s linear infinite;
-// 	-ms-animation: animateClouds 2s linear infinite;
-// 	-o-animation: animateClouds 2s  linear infinite;
-// 	animation: animateClouds 2s linear infinite;
+	background: url(../../app/images/background_clouds.jpg) top left repeat-x;
+	background-size: contain;
+	-webkit-animation: animateClouds 3s linear infinite;
+	-moz-animation: animateClouds 3s linear infinite;
+	-ms-animation: animateClouds 3s linear infinite;
+	-o-animation: animateClouds 3s  linear infinite;
+	animation: animateClouds 3s linear infinite;
 }
 
 
@@ -215,51 +209,51 @@ background: #5CC5F2;
 
 // >>>> ANIMATEBACKGROUND<<<<<
 
-// @-webkit-keyframes animateClouds {
-// 	from {
-// 		-webkit-transform: translate3d(0, 0, 0);
+@-webkit-keyframes animateClouds {
+	from {
+		-webkit-transform: translate3d(0, 0, 0);
 
-// 	}
-// 	to {
-// 		-webkit-transform: translate3d(-53em, 0, 0);
-// 	}
-// }
-// @-moz-keyframes animateClouds {
-// 	from {
-// 		-moz-transform: translate3d(0, 0, 0);
+	}
+	to {
+		-webkit-transform: translate3d(-51.2em, 0, 0);
+	}
+}
+@-moz-keyframes animateClouds {
+	from {
+		-moz-transform: translate3d(0, 0, 0);
 
-// 	}
-// 	to {
-// 		-moz-transform: translate3d(-53em, 0, 0);
-// 	}
-// }
+	}
+	to {
+		-moz-transform: translate3d(-51.2em, 0, 0);
+	}
+}
 
-// @-ms-keyframes animateClouds {
-// 	from {
-// 		-ms-transform: translate3d(0, 0, 0);
+@-ms-keyframes animateClouds {
+	from {
+		-ms-transform: translate3d(0, 0, 0);
 
-// 	}
-// 	to {
-// 		-ms-transform: translate3d(-53em, 0, 0);
-// 	}
-// }
+	}
+	to {
+		-ms-transform: translate3d(-51.2em, 0, 0);
+	}
+}
 
-// @-o-keyframes animateClouds {
-// 	from {
-// 		-o-transform: translate3d(0, 0, 0);
+@-o-keyframes animateClouds {
+	from {
+		-o-transform: translate3d(0, 0, 0);
 
-// 	}
-// 	to {
-// 		-o-transform: translate3d(-53em, 0, 0);
-// 	}
-// }
+	}
+	to {
+		-o-transform: translate3d(-51.2em, 0, 0);
+	}
+}
 
-// @keyframes animateClouds {
-// 	from {
-// 		transform: translate3d(0, 0, 0);
+@keyframes animateClouds {
+	from {
+		transform: translate3d(0, 0, 0);
 
-// 	}
-// 	to {
-// 		transform: translate3d(-53em, 0, 0);
-// 	}
-// }
+	}
+	to {
+		transform: translate3d(-51.2em, 0, 0);
+	}
+}
