@@ -14,7 +14,7 @@ var locations = {
     },
     dest: {
         scripts: 'build/scripts',
-        styles: 'app/styles/'
+        styles: 'build/styles'
     }
 };
 
