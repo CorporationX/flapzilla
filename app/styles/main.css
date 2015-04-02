@@ -21,6 +21,22 @@
 	-webkit-transition: -webkit-transform 0.5s;
 }
 
+.Ground {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 105.4em;
+	height: 3em;
+	background: url(../images/ground_grass.jpg) bottom left repeat-x;
+	background-size: contain;
+	-webkit-animation: animateGround 0.4s linear infinite;
+	-moz-animation: animateGround 0.4s linear infinite;
+	-ms-animation: animateGround 0.4s linear infinite;
+	-o-animation: animateGround 0.4s linear infinite;
+	animation: animateGround 0.4s linear infinite;
+}
+
+
 /**
 * Reset transform to animate it into the correct spot on the screen.
 */
@@ -61,4 +77,54 @@ margin-left: -51.2em;
 margin-top: -28.8em;
 overflow: hidden;
 background: red;
+}
+
+
+@-webkit-keyframes animateGround {
+	from {
+		-webkit-transform: translate3d(0, 0, 0);
+
+	}
+	to {
+		-webkit-transform: translate3d(-3em, 0, 0);
+	}
+}
+@-moz-keyframes animateGround {
+	from {
+		-moz-transform: translate3d(0, 0, 0);
+
+	}
+	to {
+		-moz-transform: translate3d(-3em, 0, 0);
+	}
+}
+
+@-ms-keyframes animateGround {
+	from {
+		-ms-transform: translate3d(0, 0, 0);
+
+	}
+	to {
+		-ms-transform: translate3d(-3em, 0, 0);
+	}
+}
+
+@-o-keyframes animateGround {
+	from {
+		-o-transform: translate3d(0, 0, 0);
+
+	}
+	to {
+		-o-transform: translate3d(-3em, 0, 0);
+	}
+}
+
+@keyframes animateGround {
+	from {
+		transform: translate3d(0, 0, 0);
+
+	}
+	to {
+		transform: translate3d(-3em, 0, 0);
+	}
 }
