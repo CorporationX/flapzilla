@@ -4,7 +4,24 @@
 	left: 0;
 	width: 5em;
 	height: 5em;
-	background: blue;
+	background: #FF00FF;
+	border-radius: 20em;
+}
+
+.Player-wing {
+	position: absolute;
+	left: 1em;
+	top: 2.5em;
+	height: 1.5em;
+	width: 2em;
+
+	background: yellow;
+	transform-origin: top left;
+	-webkit-animation: flap 0.4s alternate infinite;
+	-moz-animation: flap 0.4s alternate infinite;
+	-ms-animation: flap 0.4s alternate infinite;
+	-o-animation: flap 0.4s alternate infinite;
+	animation: flap 0.4s alternate infinite;
 }
 
 .Scoreboard {
@@ -76,7 +93,57 @@ height: 57.6em;
 margin-left: -51.2em;
 margin-top: -28.8em;
 overflow: hidden;
-background: red;
+background: #00CCFF;
+}
+
+
+@-webkit-keyframes flap {
+	from {
+		-webkit-transform:  rotateX(0);
+
+	}
+	to {
+		-webkit-transform: rotateX(180deg);
+	}
+}
+@-moz-keyframes flap {
+	from {
+		-moz-transform: rotateX(0);
+
+	}
+	to {
+		-moz-transform: rotateX(180deg);
+	}
+}
+
+@-ms-keyframes flap {
+	from {
+		-ms-transform: rotateX(0);
+
+	}
+	to {
+		-ms-transform: rotateX(180deg);
+	}
+}
+
+@-o-keyframes flap {
+	from {
+		-o-transform: rotateX(0);
+
+	}
+	to {
+		-o-transform: rotateX(180deg);
+	}
+}
+
+@keyframes flap {
+	from {
+		transform: rotateX(0);
+
+	}
+	to {
+		transform: rotateX(180deg);
+	}
 }
 
 
