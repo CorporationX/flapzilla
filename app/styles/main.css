@@ -44,7 +44,7 @@
 	left: 0;
 	width: 105.4em;
 	height: 3em;
-	background: url(../images/ground_grass.jpg) bottom left repeat-x;
+	background: url(../../app/images/ground_grass.jpg) bottom left repeat-x;
 	background-size: contain;
 	-webkit-animation: animateGround 0.4s linear infinite;
 	-moz-animation: animateGround 0.4s linear infinite;
