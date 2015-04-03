@@ -5,7 +5,6 @@ window.Player = (function () {
 
     // All these constants are in em's, multiply by 10 pixels
     // for 1024x576px canvas.
-    var SPEED = 30; // * 10 pixels per second
     var UP = -30;
     var DOWN = 130;
     var CHANGE = 0;
@@ -15,6 +14,8 @@ window.Player = (function () {
     var INITIAL_POSITION_Y = 25;
     var GAMEHEIGHT = 57.6;
     var GAMEWIDTH = 102.4;
+    var ROTATE = 0;
+    var MULTIPLIER = 40;
 
     var Player = function (el, game) {
         this.el = el;
@@ -25,6 +26,8 @@ window.Player = (function () {
         };
 
         this.pipe1 = new window.Pipe(GAMEWIDTH + 10, $('.PipeTop1'), $('.PipeBottom1'), this.game);
+        this.startedPlaying = false;
+
     };
 
     /**
@@ -50,11 +53,25 @@ window.Player = (function () {
         // 	this.pos.y -= delta * SPEED;
         // }
 
+
         this.pipe1.onFrame(delta * 20);
+
+        if (!this.startedPlaying && Controls.didJump()) {
+            this.startedPlaying = true;
+            $('.Start-text').css('display', 'none');
+        }
+
+        if (!this.startedPlaying) {
+            this.el.css('transform', 'translate3d(' + this.pos.x + 'em, ' + this.pos.y + 'em, 0)');
+            return;
+        }
+
 
         if (Controls.didJump()) {
             CHANGE = UP;
+            ROTATE = Math.max(ROTATE - 15, -20);
         } else {
+            ROTATE = Math.min(ROTATE + MULTIPLIER * delta, 10);
             CHANGE += DOWN * delta;
         }
 
@@ -63,7 +80,7 @@ window.Player = (function () {
         this.checkCollisionWithBounds();
 
         // Update UI
-        this.el.css('transform', 'translate(' + this.pos.x + 'em, ' + this.pos.y + 'em)');
+        this.el.css('transform', 'translate3d(' + this.pos.x + 'em, ' + this.pos.y + 'em, 0) rotate(' + ROTATE + 'deg)');
     };
 
     Player.prototype.checkCollisionWithBounds = function () {
