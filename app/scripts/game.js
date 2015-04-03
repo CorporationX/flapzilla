@@ -6,7 +6,7 @@ window.Game = (function () {
 
     /**
      * Main game class.
-     * @param {Element} el jQuery element containing the game.
+     * @param {Element} el jQuery angular.isElement(value)nt containing the game.
      * @constructor
      */
     var Game = function (el) {
