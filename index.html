@@ -17,6 +17,7 @@
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="/build/styles/index.css">
+        <link rel="stylesheet" href="/bower_components/components-font-awesome/css/font-awesome.css">
         <!-- endbuild -->
     </head>
     <body>
@@ -26,6 +27,11 @@
 
         <div class="GameCanvas">
             <div class="Background"></div>
+
+            <div class="Mute-button">
+                <i class="fa fa-volume-up"></i>    
+            </div>
+
             <div class="Player">
                 <div class="Player-wing"></div>
             </div>
@@ -75,6 +81,7 @@
         <!-- endbuild -->
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script type="text/javascript" src='../bower_components/buzz/dist/buzz.min.js'></script>  
         <script src="/app/scripts/pipe.js"></script>
         <script src="/app/scripts/main.js"></script>
         <script src="/app/scripts/controls.js"></script>
