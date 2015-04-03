@@ -59,7 +59,6 @@ window.Player = (function () {
         if (!this.startedPlaying) {
 
             this.el.css('-moz-transform', 'translate3d(' + this.pos.x + 'em, ' + this.pos.y + 'em, 0)');
-            this.el.css('-webkit-transform', 'translate3d(' + this.pos.x + 'em, ' + this.pos.y + 'em, 0)');
             this.el.css('transform', 'translate3d(' + this.pos.x + 'em, ' + this.pos.y + 'em, 0)');
             return;
         }
@@ -84,7 +83,6 @@ window.Player = (function () {
 
         // Update UI
         this.el.css('-moz-transform', 'translate3d(' + this.pos.x + 'em, ' + this.pos.y + 'em, 0) rotate(' + ROTATE + 'deg)');
-        this.el.css('-webkit-transform', 'translate3d(' + this.pos.x + 'em, ' + this.pos.y + 'em, 0) rotate(' + ROTATE + 'deg)');
         this.el.css('transform', 'translate3d(' + this.pos.x + 'em, ' + this.pos.y + 'em, 0) rotate(' + ROTATE + 'deg)');
     };
 
@@ -106,13 +104,10 @@ window.Player = (function () {
         if ((INITIAL_POSITION_X > this.current.currentX + this.current.WIDTH)) {
 
             if (this.current.name === 'pipe1') {
-                console.log("just passed: ", this.current.name);
                 this.current = this.pipe2;
             } else if (this.current.name === 'pipe2') {
-                console.log("just passed: ", this.current.name);
                 this.current = this.pipe3;
             } else if (this.current.name === 'pipe3') {
-                console.log("just passed: ", this.current.name);
                 this.current = this.pipe1;
             }
             this.game.updateScore();

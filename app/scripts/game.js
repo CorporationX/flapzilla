@@ -71,15 +71,12 @@ window.Game = (function () {
 		$('.Score-top').css('display', 'block');
 
 		$('.Ground').css('animation-play-state', 'running');
-		$('.Ground').css('-webkit-animation-play-state', 'running');
 		$('.Ground').css('-moz-animation-play-state', 'running');
 
 		$('.Player-wing').css('animation-play-state', 'running');
-		$('.Player-wing').css('-webkit-animation-play-state', 'running');
 		$('.Player-wing').css('-moz-animation-play-state', 'running');
 
 		$('.Background').css('animation-play-state', 'running');
-		$('.Background').css('-webkit-animation-play-state', 'running');
 		$('.Background').css('-moz-animation-play-state', 'running');
 
 	};
@@ -94,15 +91,12 @@ window.Game = (function () {
 		this.crashSound.play();
 
 		$('.Ground').css('animation-play-state', 'paused');
-		$('.Ground').css('-webkit-animation-play-state', 'paused');
 		$('.Ground').css('-moz-animation-play-state', 'paused');
 
 		$('.Player-wing').css('animation-play-state', 'paused');
-		$('.Player-wing').css('-webkit-animation-play-state', 'paused');
 		$('.Player-wing').css('-moz-animation-play-state', 'paused');
 
 		$('.Background').css('animation-play-state', 'paused');
-		$('.Background').css('-webkit-animation-play-state', 'paused');
 		$('.Background').css('-moz-animation-play-state', 'paused');
 
 
