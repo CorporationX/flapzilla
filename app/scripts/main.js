@@ -3,38 +3,37 @@ var SOUND_PLAYING = true;
  * Bootstrap and start the game.
  */
 $(function () {
-	'use strict';
+    'use strict';
 
-	var game = new window.Game($('.GameCanvas'));
-	game.start();
+    var game = new window.Game($('.GameCanvas'));
+    game.start();
 
-	$('.Mute-icon').click(function (e) {
-		console.log("e:", e);
-		e.stopPropagation();
-		e.preventDefault();
-		SOUND_PLAYING = !SOUND_PLAYING;
+    $('.Mute-button .Mute-icon').click(function () {
 
-		var iconSoundON = 'fa fa-volume-up fa-4x';
-		var iconSoundOFF = 'fa fa-volume-off fa-4x';
+        SOUND_PLAYING = !SOUND_PLAYING;
 
-		if (SOUND_PLAYING) {
-			unMuteSound();
-			$(this).find('i').removeClass(iconSoundOFF);
-			$(this).find('i').addClass(iconSoundON);
+        var iconSoundON = 'fa fa-volume-up fa-4x';
+        var iconSoundOFF = 'fa fa-volume-off fa-4x';
 
-		} else {
-			muteSound();
-			$(this).find('i').removeClass(iconSoundON);
-			$(this).find('i').addClass(iconSoundOFF);
-		}
-	});
+        if (SOUND_PLAYING) {
+            unMuteSound();
+            $(this).find('i').removeClass(iconSoundOFF);
+            $(this).find('i').addClass(iconSoundON);
 
-	function muteSound() {
-		game.backgroundMusic.mute();
-	}
+        } else {
+            muteSound();
+            $(this).find('i').removeClass(iconSoundON);
+            $(this).find('i').addClass(iconSoundOFF);
+        }
 
-	function unMuteSound() {
-		game.backgroundMusic.unmute();
-	}
+    });
+
+    function muteSound() {
+        game.backgroundMusic.mute();
+    }
+
+    function unMuteSound() {
+        game.backgroundMusic.unmute();
+    }
 
 });

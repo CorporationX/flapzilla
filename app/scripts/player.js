@@ -25,9 +25,11 @@ window.Player = (function () {
             y: 0
         };
 
-        this.pipe1 = new window.Pipe(GAMEWIDTH + 10, $('.PipeTop1'), $('.PipeBottom1'), this.game);
-        this.pipe2 = new window.Pipe(GAMEWIDTH + 50, $('.PipeTop2'), $('.PipeBottom2'), this.game);
-        this.pipe3 = new window.Pipe(GAMEWIDTH + 90, $('.PipeTop3'), $('.PipeBottom3'), this.game);
+        this.pipe1 = new window.Pipe(GAMEWIDTH + 10, $('.PipeTop1'), $('.PipeBottom1'), this.game, 'pipe1');
+        this.pipe2 = new window.Pipe(GAMEWIDTH + 50, $('.PipeTop2'), $('.PipeBottom2'), this.game, 'pipe2');
+        this.pipe3 = new window.Pipe(GAMEWIDTH + 90, $('.PipeTop3'), $('.PipeBottom3'), this.game, 'pipe3');
+
+        this.current = this.pipe1;
 
         this.startedPlaying = false;
 
@@ -96,6 +98,18 @@ window.Player = (function () {
 
     Player.prototype.checkCollisionWithPipe = function (pipe) {
 
+        if ((INITIAL_POSITION_X > this.current.currentX + this.current.WIDTH)) {
+
+            if (this.current.name === 'pipe1') {
+                this.current = this.pipe2;
+            } else if (this.current.name === 'pipe2') {
+                this.current = this.pipe3;
+            } else if (this.current.name === 'pipe3') {
+                this.current = this.pipe1;
+            }
+
+        }
+
         if ((INITIAL_POSITION_X > pipe.currentX + pipe.WIDTH) || (INITIAL_POSITION_X + WIDTH < pipe.currentX)) {
             return;
         }
@@ -103,8 +117,6 @@ window.Player = (function () {
         if ((this.pos.y + HEIGHT < pipe.pipeBottom.top) && (this.pos.y > pipe.pipeTop.bottom)) {
             return;
         }
-
-        console.log('y pos is ', this.pos.y, 'bottom of top is', pipe.pipeTop.bottom);
 
         return this.game.gameover();
 

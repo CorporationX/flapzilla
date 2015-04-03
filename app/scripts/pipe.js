@@ -6,7 +6,9 @@ window.Pipe = (function () {
     var WIDTH = 3.2;
 
 
-    var Pipe = function (xPosition, pipeTop, pipeBottom, game) {
+    var Pipe = function (xPosition, pipeTop, pipeBottom, game, name) {
+        this.name = name;
+
         this.pipeTop = {
             el: pipeTop,
             bottom: 0
