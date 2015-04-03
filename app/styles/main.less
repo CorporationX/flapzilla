@@ -84,6 +84,12 @@ body {
 	-webkit-transform: translate3d(0, -50em, 0);
 	-webkit-transition: -webkit-transform 0.5s;
 
+    transform: translate3d(0, -50em, 0);
+    transition: transform 0.5s;
+
+    -moz-transform: translate3d(0, -50em, 0);
+    -moz-transition: -moz-transform 0.5s;
+
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -143,6 +149,8 @@ body {
 */
 .Scoreboard.is-visible {
 	-webkit-transform: none;
+    -moz-transform: none;
+    transform: none;
 }
 
 .Scoreboard-restart {
@@ -166,14 +174,20 @@ body {
 	h1{
 		font-size: 4em;
 	}
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .Mute-button {
 	position: absolute;
   	top: 2em;
   	left: 2em;
-  	.Mute-icon{
-        z-index: 100;
+    z-index: 100;
+    .Mute-icon{
 
     	&:hover {
 
