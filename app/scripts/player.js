@@ -39,27 +39,15 @@ window.Player = (function () {
     Player.prototype.reset = function () {
         this.pos.x = INITIAL_POSITION_X;
         this.pos.y = INITIAL_POSITION_Y;
+        this.pipe1.reset();
+        this.pipe2.reset();
+        this.pipe3.reset();
         CHANGE = 0;
     };
 
+    var a = true;
+
     Player.prototype.onFrame = function (delta) {
-        // if (Controls.keys.right) {
-        // 	this.pos.x += delta * SPEED;
-        // }
-        // if (Controls.keys.left) {
-        // 	this.pos.x -= delta * SPEED;
-        // }
-        // if (Controls.keys.down) {
-        // 	this.pos.y += delta * SPEED;
-        // }
-        // if (Controls.keys.up) {
-        // 	this.pos.y -= delta * SPEED;
-        // }
-
-
-        this.pipe1.onFrame(delta * 20);
-        this.pipe2.onFrame(delta * 20);
-        this.pipe3.onFrame(delta * 20);
 
 
         if (!this.startedPlaying && Controls.didJump()) {
@@ -68,10 +56,19 @@ window.Player = (function () {
         }
 
         if (!this.startedPlaying) {
+
+            if (a) {
+                console.log("pos", this.pos);
+                a = false;
+            }
+
             this.el.css('transform', 'translate3d(' + this.pos.x + 'em, ' + this.pos.y + 'em, 0)');
             return;
         }
 
+        this.pipe1.onFrame(delta * 20);
+        this.pipe2.onFrame(delta * 20);
+        this.pipe3.onFrame(delta * 20);
 
         if (Controls.didJump()) {
             CHANGE = UP;
@@ -96,6 +93,9 @@ window.Player = (function () {
             this.pos.y + HEIGHT > this.game.WORLD_HEIGHT - 3) {
             return this.game.gameover();
         }
+
+
+
     };
 
     return Player;
