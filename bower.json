@@ -1,8 +1,11 @@
 {
-  "name": "html5-game-new",
-  "private": true,
-  "dependencies": {
-    "jquery": "~1.11.0"
-  },
-  "devDependencies": {}
+	"name": "html5-game-new",
+	"private": true,
+	"dependencies": {
+		"jquery": "~1.11.0"
+	},
+	"devDependencies": {
+		"components-font-awesome": "~4.3.0",
+		"buzz": "~1.1.0"
+	}
 }

@@ -26,6 +26,12 @@
 
         <div class="GameCanvas">
             <div class="Background"></div>
+
+            <div class="Mute-button">
+                <span>HALLÓ <i class="fa fa-volume-up"></i></span>
+                
+            </div>
+
             <div class="Player">
                 <div class="Player-wing"></div>
             </div>
@@ -66,6 +72,8 @@
 
             <div class="Start-text"><h1 class="text-center">Press to start</h1></div>
             <div class="Ground"></div>
+
+
         </div>
 
         <!-- build:js scripts/vendor.js -->
@@ -75,6 +83,7 @@
         <!-- endbuild -->
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script type="text/javascript" src='../bower_components/buzz/dist/buzz.min.js'></script>    
         <script src="scripts/pipe.js"></script>
         <script src="scripts/main.js"></script>
         <script src="scripts/controls.js"></script>
