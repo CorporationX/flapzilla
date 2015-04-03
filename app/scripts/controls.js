@@ -25,7 +25,7 @@ window.Controls = (function () {
             .on('keydown', this._onKeyDown.bind(this))
             .on('keyup', this._onKeyUp.bind(this))
             .on('touchstart mousedown', this._onMouseDown.bind(this))
-            .on('touchend mouseup', this._onMouseUp.bind(this));
+            .on('touchend mouseup', this._onMouseUp.bind(this))
     };
 
     Controls.prototype._onKeyDown = function (e) {
@@ -52,7 +52,7 @@ window.Controls = (function () {
     Controls.prototype._onMouseDown = function (e) {
         this._didJump = true;
     };
-    Controls.prototype._onMouseUp = function (e) {
+    Controls.prototype._onMouseUp = function () {
         this._didJump = false;
     };
 

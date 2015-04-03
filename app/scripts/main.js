@@ -1,10 +1,40 @@
-
+var SOUND_PLAYING = true;
 /**
  * Bootstrap and start the game.
  */
-$(function() {
-    'use strict';
+$(function () {
+	'use strict';
 
-    var game = new window.Game($('.GameCanvas'));
-    game.start();
+	var game = new window.Game($('.GameCanvas'));
+	game.start();
+
+	$('.Mute-icon').click(function (e) {
+		console.log("e:", e);
+		e.stopPropagation();
+		e.preventDefault();
+		SOUND_PLAYING = !SOUND_PLAYING;
+
+		var iconSoundON = 'fa fa-volume-up fa-4x';
+		var iconSoundOFF = 'fa fa-volume-off fa-4x';
+
+		if (SOUND_PLAYING) {
+			unMuteSound();
+			$(this).find('i').removeClass(iconSoundOFF);
+			$(this).find('i').addClass(iconSoundON);
+
+		} else {
+			muteSound();
+			$(this).find('i').removeClass(iconSoundON);
+			$(this).find('i').addClass(iconSoundOFF);
+		}
+	});
+
+	function muteSound() {
+		game.backgroundMusic.mute();
+	}
+
+	function unMuteSound() {
+		game.backgroundMusic.unmute();
+	}
+
 });
