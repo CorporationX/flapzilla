@@ -14,10 +14,10 @@ window.Game = (function () {
 		// Cache a bound onFrame since we need it each frame.
 		this.onFrame = this.onFrame.bind(this);
 
-        // this.backgroundMusic = new buzz.sound('../app/sounds/background_music.mp3', {
-        //  loop: true,
-        //  autoplay: true
-        // });
+        this.backgroundMusic = new buzz.sound('../app/sounds/background_music.mp3', {
+            loop: true,
+            autoplay: true
+        });
 	};
 
 	/**
