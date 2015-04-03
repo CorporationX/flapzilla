@@ -68,6 +68,8 @@ window.Player = (function () {
         if (Controls.didJump()) {
             CHANGE = UP;
             ROTATE = Math.max(ROTATE - 15, -20);
+            this.game.wingFlapSound.play();
+            this.game.wingFlapSound.setTime(0);
         } else {
             ROTATE = Math.min(ROTATE + MULTIPLIER * delta, 10);
             CHANGE += DOWN * delta;

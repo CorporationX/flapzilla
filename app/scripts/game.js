@@ -14,12 +14,12 @@ window.Game = (function () {
 		// Cache a bound onFrame since we need it each frame.
 		this.onFrame = this.onFrame.bind(this);
 
-		this.backgroundMusic = new buzz.sound('../app/sounds/background_music.mp3', {
+		this.backgroundMusic = new buzz.sound('/app/sounds/background_music.mp3', {
 			loop: true,
 			autoplay: true
 		});
-
-		this.wingFlapSound = new buzz.sound('../app/sound/flap.wav');
+		this.crashSound = new buzz.sound('/app/sounds/crash.mp3');
+		this.wingFlapSound = new buzz.sound('/app/sounds/flap.wav');
 	};
 
 	/**
@@ -70,6 +70,8 @@ window.Game = (function () {
 	Game.prototype.gameover = function () {
 		this.isPlaying = false;
 		this.player.startedPlaying = false;
+
+		this.crashSound.play();
 
 		// Should be refactored into a Scoreboard class.
 		var that = this;

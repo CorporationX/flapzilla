@@ -31,10 +31,14 @@ $(function () {
 
 	function muteSound() {
 		game.backgroundMusic.mute();
+		game.wingFlapSound.mute();
+		game.crashSound.mute();
 	}
 
 	function unMuteSound() {
 		game.backgroundMusic.unmute();
+		game.wingFlapSound.unmute();
+		game.crashSound.unmute();
 	}
 
 });
