@@ -8,6 +8,7 @@ $(function () {
     var game = new window.Game($('.GameCanvas'));
     game.start();
 
+
     $('.Mute-button .Mute-icon').click(function () {
 
         SOUND_PLAYING = !SOUND_PLAYING;

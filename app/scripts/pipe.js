@@ -70,9 +70,6 @@ window.Pipe = (function () {
         this.pipeTop.el.css('transform', 'translate3d(' + this.currentX + 'em,' + (-(GAMEHEIGHT - this.pipeTop.bottom)) + 'em, 0)');
         this.pipeBottom.el.css('transform', 'translate3d(' + this.currentX + 'em,' + this.pipeBottom.top + 'em, 0)');
 
-        this.pipeTop.el.css('-webkit-transform', 'translate3d(' + this.currentX + 'em,' + (-(GAMEHEIGHT - this.pipeTop.bottom)) + 'em, 0)');
-        this.pipeBottom.el.css('-webkit-transform', 'translate3d(' + this.currentX + 'em,' + this.pipeBottom.top + 'em, 0)');
-
         this.pipeTop.el.css('-moz-transform', 'translate3d(' + this.currentX + 'em,' + (-(GAMEHEIGHT - this.pipeTop.bottom)) + 'em, 0)');
         this.pipeBottom.el.css('-moz-transform', 'translate3d(' + this.currentX + 'em,' + this.pipeBottom.top + 'em, 0)');
 

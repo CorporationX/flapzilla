@@ -1,6 +1,9 @@
 window.Game = (function () {
     'use strict';
 
+    var GAMEHEIGHT = 57.6;
+    var GAMEWIDTH = 102.4;
+
     /**
      * Main game class.
      * @param {Element} el jQuery element containing the game.
