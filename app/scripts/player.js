@@ -13,6 +13,8 @@ window.Player = (function () {
     var HEIGHT = 3;
     var INITIAL_POSITION_X = 30;
     var INITIAL_POSITION_Y = 25;
+    var GAMEHEIGHT = 57.6;
+    var GAMEWIDTH = 102.4;
 
     var Player = function (el, game) {
         this.el = el;
@@ -21,6 +23,8 @@ window.Player = (function () {
             x: 0,
             y: 0
         };
+
+        this.pipe1 = new window.Pipe(GAMEWIDTH + 10, $('.PipeTop1'), $('.PipeBottom1'), this.game);
     };
 
     /**
@@ -45,6 +49,8 @@ window.Player = (function () {
         // if (Controls.keys.up) {
         // 	this.pos.y -= delta * SPEED;
         // }
+
+        this.pipe1.onFrame(delta * 20);
 
         if (Controls.didJump()) {
             CHANGE = UP;
