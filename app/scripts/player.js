@@ -12,7 +12,6 @@ window.Player = (function () {
     var HEIGHT = 3;
     var INITIAL_POSITION_X = 15;
     var INITIAL_POSITION_Y = 25;
-    var GAMEHEIGHT = 57.6;
     var GAMEWIDTH = 102.4;
     var ROTATE = 0;
     var MULTIPLIER = 40;

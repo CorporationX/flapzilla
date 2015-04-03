@@ -1,4 +1,5 @@
 window.Game = (function () {
+
     'use strict';
 
     /**
@@ -66,7 +67,6 @@ window.Game = (function () {
         this.player.reset();
         this.score = 0;
         $('.Score-text').text(this.score);
-        console.log("this.score", this.score);
         $('.Start-text').css('display', 'block');
         $('.Score-top').css('display', 'block');
 
