@@ -47,8 +47,6 @@ window.Player = (function () {
         CHANGE = 0;
     };
 
-    var a = true;
-
     Player.prototype.onFrame = function (delta) {
 
 
