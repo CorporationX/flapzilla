@@ -44,6 +44,7 @@ window.Player = (function () {
         this.pipe1.reset();
         this.pipe2.reset();
         this.pipe3.reset();
+        this.current = this.pipe1;
         CHANGE = 0;
     };
 
@@ -101,13 +102,16 @@ window.Player = (function () {
         if ((INITIAL_POSITION_X > this.current.currentX + this.current.WIDTH)) {
 
             if (this.current.name === 'pipe1') {
+                console.log("just passed: ", this.current.name);
                 this.current = this.pipe2;
             } else if (this.current.name === 'pipe2') {
+                console.log("just passed: ", this.current.name);
                 this.current = this.pipe3;
             } else if (this.current.name === 'pipe3') {
+                console.log("just passed: ", this.current.name);
                 this.current = this.pipe1;
             }
-
+            this.game.updateScore();
         }
 
         if ((INITIAL_POSITION_X > pipe.currentX + pipe.WIDTH) || (INITIAL_POSITION_X + WIDTH < pipe.currentX)) {
