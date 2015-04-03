@@ -90,8 +90,8 @@ window.Player = (function () {
         }
 
         this.checkCollisionWithPipe(this.pipe1);
-        // this.checkCollisionWithPipe(this.pipe2);
-        // this.checkCollisionWithPipe(this.pipe3);
+        this.checkCollisionWithPipe(this.pipe2);
+        this.checkCollisionWithPipe(this.pipe3);
     };
 
     Player.prototype.checkCollisionWithPipe = function (pipe) {
