@@ -1,5 +1,5 @@
-window.Game = (function () {
-	'use strict';
+window.Game = (function () { << << << < HEAD
+		'use strict';
 
 	/**
 	 * Main game class.
