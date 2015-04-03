@@ -65,6 +65,8 @@ window.Game = (function () {
 	Game.prototype.reset = function () {
 		this.player.reset();
 		this.score = 0;
+		$('.Score-text').text(this.score);
+		console.log("this.score", this.score);
 		$('.Start-text').css('display', 'block');
 		$('.Score-top').css('display', 'block');
 	};
