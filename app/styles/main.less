@@ -84,6 +84,12 @@ body {
 	-webkit-transform: translate3d(0, -50em, 0);
 	-webkit-transition: -webkit-transform 0.5s;
 
+    transform: translate3d(0, -50em, 0);
+    transition: transform 0.5s;
+
+    -moz-transform: translate3d(0, -50em, 0);
+    -moz-transition: -moz-transform 0.5s;
+
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -143,6 +149,8 @@ body {
 */
 .Scoreboard.is-visible {
 	-webkit-transform: none;
+    -moz-transform: none;
+    transform: none;
 }
 
 .Scoreboard-restart {
