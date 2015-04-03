@@ -1,3 +1,48 @@
+body {
+	background: black;
+}
+
+.GameCanvas {
+	font-size: 10px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 102.4em;
+	height: 57.6em;
+	margin-left: -51.2em;
+	margin-top: -28.8em;
+	overflow: hidden;
+	background: @background-color-sky;
+}
+
+.Background{
+	width: 153.6em;
+	height: 37.3em;
+
+	background: url(../../app/images/background_clouds.jpg) top left repeat-x;
+	background-size: contain;
+	-webkit-animation: animateClouds 6s linear infinite;
+	-moz-animation: animateClouds 6s linear infinite;
+	-ms-animation: animateClouds 6s linear infinite;
+	-o-animation: animateClouds 6s  linear infinite;
+	animation: animateClouds 6s linear infinite;
+}
+
+.Ground {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 105.4em;
+	height: 3em;
+	background: url(../../app/images/ground_grass.jpg) bottom left repeat-x;
+	background-size: contain;
+	-webkit-animation: animateGround 0.2s linear infinite;
+	-moz-animation: animateGround 0.2s linear infinite;
+	-ms-animation: animateGround 0.2s linear infinite;
+	-o-animation: animateGround 0.2s linear infinite;
+	animation: animateGround 0.2s linear infinite;
+}
+
 .Player {
 	position: absolute;
 	top: 0;
@@ -29,23 +74,29 @@
 .Scoreboard {
 	position: absolute;
   	left: 60em;
-  	top: 20em;
+  	top: 15em;
   	height: 19.5em;
   	width: 20em;
   	margin-left: -20em;
   	box-sizing: border-box;
 	background: url(../../app/images/coin.png);
 	text-align: center;
-	-webkit-transform: translate3d(0, -40em, 0);
+	-webkit-transform: translate3d(0, -50em, 0);
 	-webkit-transition: -webkit-transform 0.5s;
 }
 
-.Scoreboard-number {
-	height: 19.5em;
-  	width: 20em;
+.Scoreboard-gameover {
 	position: absolute;
-	left: 0.3em;
-	font-size: 6em;  
+  	top: -9em;
+  	left: 0;
+  	
+  	h1{
+  		font-size: 4em;
+  	}
+} 
+
+.Scoreboard-score h1{
+	font-size: 3em;
 }
 
 .Start-text {
@@ -58,22 +109,6 @@
 	}
 	// display: none;
 }
-
-.Ground {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 105.4em;
-	height: 3em;
-	background: url(../../app/images/ground_grass.jpg) bottom left repeat-x;
-	background-size: contain;
-	-webkit-animation: animateGround 0.2s linear infinite;
-	-moz-animation: animateGround 0.2s linear infinite;
-	-ms-animation: animateGround 0.2s linear infinite;
-	-o-animation: animateGround 0.2s linear infinite;
-	animation: animateGround 0.2s linear infinite;
-}
-
 
 /**
 * Reset transform to animate it into the correct spot on the screen.
@@ -91,38 +126,12 @@
 	cursor: pointer;
 }
 .Scoreboard-restartText {
-font-family: 'Comic Sans MS', serif;
-font-size: 2.4em;
-color: white;
-}
-body {
-background: black;
-}
-.GameCanvas {
-font-size: 10px;
-position: absolute;
-left: 50%;
-top: 50%;
-width: 102.4em;
-height: 57.6em;
-margin-left: -51.2em;
-margin-top: -28.8em;
-overflow: hidden;
-background: @background-color-sky;
+	font-family: 'Comic Sans MS', serif;
+	font-size: 2.4em;
+	color: white;
 }
 
-.Background{
-	width: 153.6em;
-	height: 37.3em;
 
-	background: url(../../app/images/background_clouds.jpg) top left repeat-x;
-	background-size: contain;
-	-webkit-animation: animateClouds 6s linear infinite;
-	-moz-animation: animateClouds 6s linear infinite;
-	-ms-animation: animateClouds 6s linear infinite;
-	-o-animation: animateClouds 6s  linear infinite;
-	animation: animateClouds 6s linear infinite;
-}
 
 
 // >>>> FLAP <<<<<
