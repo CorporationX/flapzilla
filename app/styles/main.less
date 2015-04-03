@@ -28,16 +28,35 @@
 
 .Scoreboard {
 	position: absolute;
-	left: 50%;
-	top: 10em;
-	height: 30em;
-	width: 40em;
-	margin-left: -20em;
-	box-sizing: border-box;
-	background: purple;
+  	left: 60em;
+  	top: 20em;
+  	height: 19.5em;
+  	width: 20em;
+  	margin-left: -20em;
+  	box-sizing: border-box;
+	background: url(../../app/images/coin.png);
 	text-align: center;
-	-webkit-transform: translate(0, -40em);
+	-webkit-transform: translate3d(0, -40em, 0);
 	-webkit-transition: -webkit-transform 0.5s;
+}
+
+.Scoreboard-number {
+	height: 19.5em;
+  	width: 20em;
+	position: absolute;
+	left: 0.3em;
+	font-size: 6em;  
+}
+
+.Start-text {
+  	position: absolute;
+  	height: 10em;
+  	margin-top: -15em;
+  	margin-left: 38em;
+	h1 {
+		font-size: 5em;
+	}
+	// display: none;
 }
 
 .Ground {
@@ -89,7 +108,7 @@ height: 57.6em;
 margin-left: -51.2em;
 margin-top: -28.8em;
 overflow: hidden;
-background: #5CC5F2;
+background: @background-color-sky;
 }
 
 .Background{
