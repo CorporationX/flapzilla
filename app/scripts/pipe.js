@@ -29,7 +29,7 @@ window.Pipe = (function () {
 
     Pipe.prototype.setGap = function () {
 
-        this.pipeTop.bottom = Math.floor(Math.random() * 25) + 10;
+        this.pipeTop.bottom = Math.floor(Math.random() * 30) + 5;
         this.pipeBottom.top = this.pipeTop.bottom + 10;
 
     };
@@ -52,7 +52,7 @@ window.Pipe = (function () {
     Pipe.prototype.onFrame = function (xDist) {
 
         if (this.currentX <= WIDTH - 10) {
-            this.reset();
+            this.loop();
         }
 
         this.currentX -= xDist;

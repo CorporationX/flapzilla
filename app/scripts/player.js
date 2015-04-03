@@ -26,6 +26,9 @@ window.Player = (function () {
         };
 
         this.pipe1 = new window.Pipe(GAMEWIDTH + 10, $('.PipeTop1'), $('.PipeBottom1'), this.game);
+        this.pipe2 = new window.Pipe(GAMEWIDTH + 50, $('.PipeTop2'), $('.PipeBottom2'), this.game);
+        this.pipe3 = new window.Pipe(GAMEWIDTH + 90, $('.PipeTop3'), $('.PipeBottom3'), this.game);
+
         this.startedPlaying = false;
 
     };
@@ -55,6 +58,9 @@ window.Player = (function () {
 
 
         this.pipe1.onFrame(delta * 20);
+        this.pipe2.onFrame(delta * 20);
+        this.pipe3.onFrame(delta * 20);
+
 
         if (!this.startedPlaying && Controls.didJump()) {
             this.startedPlaying = true;
