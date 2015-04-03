@@ -1,9 +1,9 @@
 window.Pipe = (function () {
     'use strict';
 
-    var WIDTH = 3.2;
     var GAMEHEIGHT = 57.6;
     var GAMEWIDTH = 102.4;
+    var WIDTH = 3.2;
 
 
     var Pipe = function (xPosition, pipeTop, pipeBottom, game) {
@@ -25,6 +25,8 @@ window.Pipe = (function () {
         this.originX = xPosition;
 
         this.movePipe();
+
+        this.WIDTH = 3.2;
     };
 
     Pipe.prototype.setGap = function () {

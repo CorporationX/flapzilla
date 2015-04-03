@@ -10,7 +10,7 @@ window.Player = (function () {
     var CHANGE = 0;
     var WIDTH = 5;
     var HEIGHT = 3;
-    var INITIAL_POSITION_X = 30;
+    var INITIAL_POSITION_X = 15;
     var INITIAL_POSITION_Y = 25;
     var GAMEHEIGHT = 57.6;
     var GAMEWIDTH = 102.4;
@@ -57,11 +57,6 @@ window.Player = (function () {
 
         if (!this.startedPlaying) {
 
-            if (a) {
-                console.log("pos", this.pos);
-                a = false;
-            }
-
             this.el.css('transform', 'translate3d(' + this.pos.x + 'em, ' + this.pos.y + 'em, 0)');
             return;
         }
@@ -94,7 +89,24 @@ window.Player = (function () {
             return this.game.gameover();
         }
 
+        this.checkCollisionWithPipe(this.pipe1);
+        // this.checkCollisionWithPipe(this.pipe2);
+        // this.checkCollisionWithPipe(this.pipe3);
+    };
 
+    Player.prototype.checkCollisionWithPipe = function (pipe) {
+
+        if ((INITIAL_POSITION_X > pipe.currentX + pipe.WIDTH) || (INITIAL_POSITION_X + WIDTH < pipe.currentX)) {
+            return;
+        }
+
+        if ((this.pos.y + HEIGHT < pipe.pipeBottom.top) && (this.pos.y > pipe.pipeTop.bottom)) {
+            return;
+        }
+
+        console.log('y pos is ', this.pos.y, 'bottom of top is', pipe.pipeTop.bottom);
+
+        return this.game.gameover();
 
     };
 
